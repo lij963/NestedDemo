@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nested"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:descendantFocusability="beforeDescendants"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+
+        <View
+            android:id="@+id/v_top"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+
+            android:background="#3faf04" />
+
+
+
+
+        <com.tsing.nested.nesteddemo.MyViewPager
+            android:id="@+id/vp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/v_top"
+            android:layout_marginTop="48dp" />
+
+        <FrameLayout
+            android:id="@+id/fl_tab"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@id/v_top">
+
+            <com.ogaclejapan.smarttablayout.SmartTabLayout
+                android:id="@+id/viewpagertab"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                app:stl_distributeEvenly="true"
+                app:stl_indicatorColor="@color/black"
+                app:stl_indicatorInterpolation="linear"
+                app:stl_indicatorThickness="3dp"
+                app:stl_underlineThickness="1dp" />
+
+            <!--<com.ogaclejapan.smarttablayout.SmartTabLayout-->
+            <!--android:id="@+id/viewpagertab"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="48dp"-->
+            <!--android:layout_below="@id/v_top"-->
+            <!--app:stl_clickable="true"-->
+            <!--app:stl_defaultTabBackground="?attr/selectableItemBackground"-->
+            <!--app:stl_defaultTabTextAllCaps="true"-->
+            <!--app:stl_defaultTabTextColor="#FC000000"-->
+            <!--app:stl_defaultTabTextHorizontalPadding="16dp"-->
+            <!--app:stl_defaultTabTextMinWidth="0dp"-->
+            <!--app:stl_defaultTabTextSize="12sp"-->
+            <!--app:stl_distributeEvenly="true"-->
+            <!--app:stl_dividerColor="#4D000000"-->
+            <!--app:stl_dividerThickness="0dp"-->
+            <!--app:stl_drawDecorationAfterTab="false"-->
+            <!--app:stl_indicatorAlwaysInCenter="false"-->
+            <!--app:stl_indicatorColor="#40C4FF"-->
+            <!--app:stl_indicatorCornerRadius="2dp"-->
+            <!--app:stl_indicatorGravity="bottom"-->
+            <!--app:stl_indicatorInFront="true"-->
+            <!--app:stl_indicatorInterpolation="smart"-->
+            <!--app:stl_indicatorThickness="2dp"-->
+            <!--app:stl_indicatorWidth="auto"-->
+            <!--app:stl_indicatorWithoutPadding="false"-->
+            <!--app:stl_overlineColor="#4D000000"-->
+            <!--app:stl_overlineThickness="0dp"-->
+            <!--app:stl_titleOffset="24dp"-->
+            <!--app:stl_underlineColor="#4D000000"-->
+            <!--app:stl_underlineThickness="1px" />-->
+        </FrameLayout>
+
+        <View
+            android:id="@+id/v_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            android:layout_below="@id/vp"
+
+            android:background="#ff00ff" />
+
+    </RelativeLayout>
+
+</android.support.v4.widget.NestedScrollView>
